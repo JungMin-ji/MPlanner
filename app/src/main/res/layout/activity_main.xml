@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnPrevTodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/prev"
+            android:padding="0dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오늘의 할 일"
+            android:textSize="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            />
+        <ImageButton
+            android:id="@+id/btnNextTodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/next"
+            android:padding="0dp"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/listView">
+
+        <!--<CheckBox-->
+            <!--android:id="@+id/checkBox1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="할 일 1 "-->
+            <!--android:buttonTint="#BF94E4" />-->
+
+
+        <!--<CheckBox-->
+            <!--android:id="@+id/checkBox2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="할 일 2 " />-->
+
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnAddTodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:src="@drawable/add"
+            />
+
+        <TextView
+            android:id="@+id/txtAddTodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="할 일 추가하기"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+    <!--bottom bar-->
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <com.ismaeldivita.chipnavigation.ChipNavigationBar
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#fff"
+            android:elevation="16dp"
+            app:cnb_menuResource="@menu/bottom_navigation"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</LinearLayout>
+

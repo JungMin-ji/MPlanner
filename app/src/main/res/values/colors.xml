@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <!--bottom navigation bar-->
+    <color name="navigation_color_add">#6200EE</color>
+    <color name="navigation_color_mood">#C9379D</color>
+    <color name="navigation_color_habit">#E6A919</color>
+    <color name="navigation_color_chart">#008577</color>
+    <color name="navigation_color_profile">#1194AA</color>
+
+</resources>
