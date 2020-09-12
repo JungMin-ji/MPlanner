@@ -1,5 +1,6 @@
 package com.example.test;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
@@ -13,6 +14,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -29,6 +31,12 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +50,7 @@ public class MainActivity extends AppCompatActivity{
     ListView listView;
     final ArrayList<String> todoList = new ArrayList<String>();  // 최대 50개의 체크박스 추가
     ListViewAdapter myAdapter;
+    BottomNavigationView navigationbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +59,7 @@ public class MainActivity extends AppCompatActivity{
 
 
         // custom actionbar
-        ActionBar actionBar = getSupportActionBar();
+        final ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("오늘의 할 일");
 
         // shared preference
@@ -59,6 +68,7 @@ public class MainActivity extends AppCompatActivity{
         btnAddTodo = findViewById(R.id.btnAddTodo);
         txtAddTodo = findViewById(R.id.txtAddTodo);
         listView = findViewById(R.id.listView);
+        navigationbar = findViewById(R.id.nav_view);
 
 
         // 리스트뷰 설정
@@ -84,13 +94,30 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View view) {
                 show();
                 myAdapter.notifyDataSetChanged();
-
             }
         });
 
+        // navigation bar 클릭 처리
+        navigationbar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.calendar:
+                        //Intent intent = new Intent(this, );
+                        break;
+                    case R.id.testRange : {
+                        Intent intent = new Intent(getApplicationContext(), TestRange.class);
+                        startActivity(intent);
+                        break;
+                    }
 
+                    case R.id.memo:
+                       break;
+                }
+                return true;
 
-
+            }
+        });
 
     }
 

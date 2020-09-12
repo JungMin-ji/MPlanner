@@ -26,7 +26,5 @@
         android:title="memo"
         app:cnb_iconColor="@color/navigation_color_add"/>
 
-
-
 </menu>
 

@@ -4,6 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <ImageButton
+        android:id="@+id/btnAddRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/register"
+        android:padding="0dp"
+        ></ImageButton>
+
+
+
     <EditText
         android:id="@+id/editSubjectName"
         android:layout_width="match_parent"
