@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity{
     final ArrayList<String> todoList = new ArrayList<String>();  // 최대 50개의 체크박스 추가
     ListViewAdapter myAdapter;
     BottomNavigationView navigationbar;
+    //gkkgg
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
